@@ -1,0 +1,183 @@
+/* =========================================================
+   CARDIOLOGIST WEBSITE
+   GLOBAL DESIGN VARIABLES
+   ========================================================= */
+
+:root {
+
+    /* =====================================================
+       COLORS
+       ===================================================== */
+
+    /* Primary Brand */
+    --color-primary: #0b3d5c;
+    --color-primary-dark: #082d44;
+    --color-primary-light: #155a7d;
+
+    /* Accent */
+    --color-accent: #2f8f9d;
+    --color-accent-light: #6db7bf;
+
+    /* Medical / Trust */
+    --color-medical: #1d6f78;
+    --color-medical-light: #e8f5f6;
+
+    /* Neutral */
+    --color-white: #ffffff;
+    --color-black: #0b1115;
+
+    --color-text: #1b2a32;
+    --color-text-light: #60717a;
+
+    --color-heading: #102832;
+
+    --color-border: #dce5e8;
+    --color-border-light: #edf2f3;
+
+    --color-background: #ffffff;
+    --color-background-light: #f7fafb;
+    --color-background-soft: #eef5f6;
+
+    /* Status */
+    --color-success: #2e7d5b;
+    --color-warning: #c58a25;
+    --color-danger: #c94a4a;
+
+
+    /* =====================================================
+       TYPOGRAPHY
+       ===================================================== */
+
+    --font-primary: "Inter", sans-serif;
+    --font-heading: "Manrope", sans-serif;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.75rem;
+    --font-size-4xl: 3.5rem;
+    --font-size-5xl: 4.5rem;
+
+    --line-height-tight: 1.1;
+    --line-height-snug: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.7;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+
+    /* =====================================================
+       SPACING
+       ===================================================== */
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+    --space-32: 8rem;
+
+
+    /* =====================================================
+       LAYOUT
+       ===================================================== */
+
+    --container-width: 1280px;
+    --container-wide: 1440px;
+
+    --container-padding: 1.5rem;
+
+    --section-padding-y: 6rem;
+    --section-padding-y-small: 4rem;
+
+    --grid-gap: 2rem;
+    --grid-gap-small: 1.25rem;
+
+
+    /* =====================================================
+       BORDER RADIUS
+       ===================================================== */
+
+    --radius-sm: 0.375rem;
+    --radius-md: 0.625rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+
+    --radius-full: 9999px;
+
+
+    /* =====================================================
+       SHADOWS
+       ===================================================== */
+
+    --shadow-sm:
+        0 2px 8px rgba(16, 40, 50, 0.06);
+
+    --shadow-md:
+        0 8px 24px rgba(16, 40, 50, 0.08);
+
+    --shadow-lg:
+        0 16px 40px rgba(16, 40, 50, 0.10);
+
+    --shadow-xl:
+        0 24px 60px rgba(16, 40, 50, 0.14);
+
+
+    /* =====================================================
+       TRANSITIONS
+       ===================================================== */
+
+    --transition-fast: 180ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 500ms ease;
+
+    --transition-smooth:
+        500ms cubic-bezier(0.22, 1, 0.36, 1);
+
+
+    /* =====================================================
+       Z-INDEX
+       ===================================================== */
+
+    --z-base: 1;
+    --z-content: 10;
+    --z-header: 100;
+    --z-dropdown: 200;
+    --z-overlay: 500;
+    --z-modal: 1000;
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    --header-height: 80px;
+
+
+    /* =====================================================
+       ANIMATION
+       ===================================================== */
+
+    --animation-duration-fast: 0.3s;
+    --animation-duration-base: 0.6s;
+    --animation-duration-slow: 1s;
+
+    --animation-ease:
+        cubic-bezier(0.22, 1, 0.36, 1);
+}

@@ -1,0 +1,337 @@
+/* =========================================================
+   CARDIOLOGIST WEBSITE
+   CONTACT PAGE
+   CONTACT HERO
+   ========================================================= */
+
+
+/* =========================================================
+   HERO BASE
+   ========================================================= */
+
+.contact-page-hero {
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--color-background) 0%,
+            var(--color-background-soft) 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+   ========================================================= */
+
+.contact-page-hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: -190px;
+    right: -130px;
+
+    width: 560px;
+    height: 560px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(47, 143, 157, 0.14) 0%,
+            rgba(47, 143, 157, 0.05) 42%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+}
+
+
+.contact-page-hero::after {
+    content: "";
+
+    position: absolute;
+
+    right: 12%;
+    bottom: -130px;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid
+        rgba(47, 143, 157, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
+
+.contact-page-hero .container {
+    position: relative;
+
+    z-index: var(--z-content);
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.contact-page-hero__content {
+    position: relative;
+
+    max-width: 900px;
+
+    padding-block: var(--space-16);
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.contact-page-hero__eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: var(--space-3);
+
+    margin-bottom: var(--space-5);
+
+    color: var(--color-accent);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: 0.1em;
+
+    line-height: var(--line-height-normal);
+
+    text-transform: uppercase;
+}
+
+
+.contact-page-hero__eyebrow::before {
+    content: "";
+
+    width: 38px;
+    height: 2px;
+
+    flex-shrink: 0;
+
+    border-radius: var(--radius-full);
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--color-primary),
+            var(--color-accent)
+        );
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.contact-page-hero__title {
+    max-width: 900px;
+
+    margin: 0 0 var(--space-6);
+
+    color: var(--color-heading);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        3rem,
+        6vw,
+        5.5rem
+    );
+
+    font-weight: var(--font-weight-extrabold);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+}
+
+
+.contact-page-hero__title span {
+    display: block;
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.contact-page-hero__description {
+    max-width: 660px;
+
+    margin: 0;
+
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-lg);
+
+    line-height: var(--line-height-relaxed);
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+.contact-page-hero [data-reveal] {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 850ms
+            cubic-bezier(0.22, 1, 0.36, 1),
+        transform 850ms
+            cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.contact-page-hero [data-reveal].is-revealed {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-page-hero {
+        min-height: 440px;
+    }
+
+
+    .contact-page-hero__content {
+        padding-block: var(--space-12);
+    }
+
+
+    .contact-page-hero__title {
+        font-size: clamp(
+            2.8rem,
+            7vw,
+            4.6rem
+        );
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .contact-page-hero {
+        min-height: 390px;
+    }
+
+
+    .contact-page-hero::before {
+        top: -160px;
+        right: -190px;
+
+        width: 430px;
+        height: 430px;
+    }
+
+
+    .contact-page-hero::after {
+        right: -90px;
+        bottom: -100px;
+
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .contact-page-hero__content {
+        padding-block: var(--space-10);
+    }
+
+
+    .contact-page-hero__eyebrow {
+        font-size: var(--font-size-xs);
+    }
+
+
+    .contact-page-hero__title {
+        margin-bottom: var(--space-5);
+
+        font-size: clamp(
+            2.35rem,
+            11vw,
+            3.5rem
+        );
+
+        line-height: 1.03;
+    }
+
+
+    .contact-page-hero__description {
+        font-size: var(--font-size-base);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .contact-page-hero__title {
+        font-size: 2.3rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-page-hero [data-reveal] {
+        transition: none;
+    }
+
+}

@@ -1,0 +1,221 @@
+/* =========================================================
+   CARDIOLOGIST WEBSITE
+   GLOBAL STYLES
+   ========================================================= */
+
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--color-background);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   WIDE CONTAINER
+   ========================================================= */
+
+.container-wide {
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        var(--container-wide)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+    position: relative;
+    width: 100%;
+    padding-block: var(--section-padding-y);
+}
+
+.section--light {
+    background: var(--color-background-light);
+}
+
+.section--soft {
+    background: var(--color-background-soft);
+}
+
+.section--white {
+    background: var(--color-white);
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.section-header {
+    max-width: 760px;
+    margin-inline: auto;
+    margin-bottom: var(--space-12);
+}
+
+.section-header.text-left {
+    margin-inline: 0;
+}
+
+.section-header__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: var(--space-3);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-normal);
+    color: var(--color-accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.section-header__title {
+    margin-bottom: var(--space-4);
+}
+
+.section-header__description {
+    max-width: 680px;
+}
+
+
+/* =========================================================
+   GLOBAL INTERACTIVE ELEMENTS
+   ========================================================= */
+
+button,
+a,
+input,
+textarea,
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-light);
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   SVG
+   ========================================================= */
+
+svg {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   VISUAL HELPERS
+   ========================================================= */
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.relative {
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

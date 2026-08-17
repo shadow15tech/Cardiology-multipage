@@ -1,0 +1,168 @@
+/* =========================================================
+   SHADOW15 CARDIOLOGIST WEBSITE
+   GLOBAL RESET
+   ========================================================= */
+
+/* ---------- Box Sizing ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* ---------- Remove Default Spacing ---------- */
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+figure,
+figcaption,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------- Document ---------- */
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+/* ---------- Body ---------- */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ---------- Typography ---------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+/* ---------- Lists ---------- */
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* ---------- Links ---------- */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ---------- Images & Media ---------- */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+
+/* ---------- Forms ---------- */
+
+button,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    border: 0;
+    outline: 0;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ---------- Tables ---------- */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ---------- Quotes ---------- */
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+}
+
+
+/* ---------- Hidden Attribute ---------- */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ---------- Selection ---------- */
+
+::selection {
+    background: transparent;
+}

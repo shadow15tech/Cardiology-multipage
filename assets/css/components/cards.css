@@ -1,0 +1,510 @@
+/* =========================================================
+   CARDIOLOGIST WEBSITE
+   SHARED CARDS
+   ========================================================= */
+
+
+/* =========================================================
+   BASE CARD
+   ========================================================= */
+
+.card {
+    position: relative;
+
+    width: 100%;
+
+    padding: var(--space-6);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-xl);
+
+    background: var(--color-white);
+
+    overflow: hidden;
+
+    transition:
+        transform var(--transition-smooth),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.card--hover:hover {
+    border-color: rgba(47, 143, 157, 0.35);
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.card__header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: var(--space-4);
+
+    margin-bottom: var(--space-5);
+}
+
+
+/* =========================================================
+   CARD ICON
+   ========================================================= */
+
+.card__icon {
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--color-medical-light);
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-xl);
+
+    transition:
+        background-color var(--transition-base),
+        color var(--transition-base),
+        transform var(--transition-smooth);
+}
+
+.card--hover:hover .card__icon {
+    background: var(--color-primary);
+
+    color: var(--color-white);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CARD NUMBER
+   ========================================================= */
+
+.card__number {
+    color: var(--color-text-light);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.card__content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-3);
+}
+
+.card__title {
+    color: var(--color-heading);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--font-size-xl);
+
+    font-weight: var(--font-weight-bold);
+
+    line-height: var(--line-height-snug);
+}
+
+.card__description {
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-sm);
+
+    line-height: var(--line-height-relaxed);
+}
+
+
+/* =========================================================
+   CARD LINK
+   ========================================================= */
+
+.card__link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: var(--space-2);
+
+    margin-top: var(--space-3);
+
+    width: fit-content;
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+
+    transition:
+        color var(--transition-base),
+        transform var(--transition-smooth);
+}
+
+.card__link:hover {
+    color: var(--color-primary-dark);
+
+    transform: translateX(4px);
+}
+
+.card__link-arrow {
+    transition:
+        transform var(--transition-smooth);
+}
+
+.card__link:hover .card__link-arrow {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+   ========================================================= */
+
+.card__media {
+    position: relative;
+
+    width: 100%;
+
+    margin: calc(var(--space-6) * -1);
+
+    margin-bottom: var(--space-6);
+
+    width: calc(100% + (var(--space-6) * 2));
+
+    overflow: hidden;
+}
+
+.card__media img {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    transition:
+        transform var(--transition-smooth);
+}
+
+.card--hover:hover .card__media img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   CARD IMAGE OVERLAY
+   ========================================================= */
+
+.card__media-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(8, 45, 68, 0.25),
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FEATURED CARD
+   ========================================================= */
+
+.card--featured {
+    border-color: rgba(47, 143, 157, 0.3);
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--color-white),
+            var(--color-background-soft)
+        );
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   FEATURED CARD ACCENT
+   ========================================================= */
+
+.card--featured::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--color-accent);
+}
+
+
+/* =========================================================
+   SOFT CARD
+   ========================================================= */
+
+.card--soft {
+    border-color: transparent;
+
+    background: var(--color-background-light);
+}
+
+
+/* =========================================================
+   DARK CARD
+   ========================================================= */
+
+.card--dark {
+    border-color: rgba(255, 255, 255, 0.08);
+
+    background: var(--color-primary-dark);
+
+    color: var(--color-white);
+}
+
+.card--dark .card__title {
+    color: var(--color-white);
+}
+
+.card--dark .card__description {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.card--dark .card__link {
+    color: var(--color-accent-light);
+}
+
+.card--dark .card__link:hover {
+    color: var(--color-white);
+}
+
+
+/* =========================================================
+   TESTIMONIAL CARD
+   ========================================================= */
+
+.card--testimonial {
+    padding: var(--space-8);
+}
+
+.card__quote {
+    margin-bottom: var(--space-6);
+
+    color: var(--color-heading);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--font-size-lg);
+
+    font-weight: var(--font-weight-medium);
+
+    line-height: var(--line-height-relaxed);
+}
+
+
+/* =========================================================
+   TESTIMONIAL AUTHOR
+   ========================================================= */
+
+.card__author {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-3);
+}
+
+.card__author-image {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border-radius: var(--radius-full);
+
+    object-fit: cover;
+}
+
+.card__author-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.card__author-name {
+    color: var(--color-heading);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+}
+
+.card__author-role {
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-xs);
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.card--stat {
+    text-align: center;
+
+    padding: var(--space-6);
+}
+
+.card__stat-value {
+    display: block;
+
+    margin-bottom: var(--space-2);
+
+    color: var(--color-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--font-size-3xl);
+
+    font-weight: var(--font-weight-extrabold);
+
+    line-height: 1;
+}
+
+.card__stat-label {
+    display: block;
+
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-sm);
+
+    line-height: var(--line-height-normal);
+}
+
+
+/* =========================================================
+   CARD GRID
+   ========================================================= */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: var(--grid-gap);
+}
+
+
+/* =========================================================
+   TWO COLUMN GRID
+   ========================================================= */
+
+.card-grid--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+/* =========================================================
+   FOUR COLUMN GRID
+   ========================================================= */
+
+.card-grid--four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .card-grid--four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: var(--grid-gap-small);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: var(--space-5);
+
+        border-radius: var(--radius-lg);
+    }
+
+    .card-grid,
+    .card-grid--two,
+    .card-grid--four {
+        grid-template-columns: 1fr;
+    }
+
+    .card--testimonial {
+        padding: var(--space-6);
+    }
+
+    .card__title {
+        font-size: var(--font-size-lg);
+    }
+
+    .card__stat-value {
+        font-size: var(--font-size-2xl);
+    }
+
+}

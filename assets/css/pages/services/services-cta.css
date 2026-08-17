@@ -1,0 +1,505 @@
+/* =========================================================
+   CARDIOLOGIST WEBSITE
+   SERVICES PAGE
+   SERVICES CTA
+   ========================================================= */
+
+
+/* =========================================================
+   CTA BASE
+   ========================================================= */
+
+.services-cta {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            125deg,
+            var(--color-primary-dark) 0%,
+            var(--color-primary) 58%,
+            var(--color-accent) 100%
+        );
+
+    color: var(--color-white);
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.services-cta::before {
+    content: "";
+
+    position: absolute;
+
+    top: -240px;
+    right: -120px;
+
+    width: 560px;
+    height: 560px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 70px
+        rgba(255, 255, 255, 0.025),
+        0 0 0 140px
+        rgba(255, 255, 255, 0.018);
+
+    pointer-events: none;
+}
+
+
+.services-cta::after {
+    content: "";
+
+    position: absolute;
+
+    left: -180px;
+    bottom: -240px;
+
+    width: 480px;
+    height: 480px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.1),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CTA INNER
+   ========================================================= */
+
+.services-cta__inner {
+    position: relative;
+
+    z-index: var(--z-content);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(280px, 0.85fr);
+
+    align-items: center;
+
+    gap: clamp(
+        var(--space-8),
+        8vw,
+        var(--space-16)
+    );
+
+    min-height: 430px;
+
+    padding-block:
+        clamp(
+            var(--space-12),
+            8vw,
+            var(--space-20)
+        );
+}
+
+
+/* =========================================================
+   CTA CONTENT
+   ========================================================= */
+
+.services-cta__content {
+    max-width: 720px;
+}
+
+
+.services-cta__eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: var(--space-3);
+
+    margin-bottom: var(--space-5);
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+
+.services-cta__eyebrow::before {
+    content: "";
+
+    width: 36px;
+    height: 2px;
+
+    border-radius: var(--radius-full);
+
+    background:
+        rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   CTA TITLE
+   ========================================================= */
+
+.services-cta__title {
+    max-width: 760px;
+
+    margin: 0 0 var(--space-6);
+
+    color: var(--color-white);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.8rem,
+        5vw,
+        5rem
+    );
+
+    font-weight: var(--font-weight-extrabold);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+}
+
+
+/* =========================================================
+   CTA TEXT
+   ========================================================= */
+
+.services-cta__text {
+    max-width: 620px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: var(--font-size-base);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CTA ACTIONS
+   ========================================================= */
+
+.services-cta__actions {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: var(--space-4);
+
+    width: min(100%, 330px);
+
+    margin-left: auto;
+
+    padding: var(--space-6);
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 26px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 30, 50, 0.16);
+
+    backdrop-filter: blur(18px);
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+   ========================================================= */
+
+.services-cta__actions .btn {
+    width: 100%;
+
+    justify-content: center;
+
+    min-height: 58px;
+
+    border-radius: var(--radius-lg);
+}
+
+
+/* =========================================================
+   LIGHT BUTTON
+   ========================================================= */
+
+.services-cta__actions
+.btn--light {
+    border: 1px solid
+        var(--color-white);
+
+    background: var(--color-white);
+
+    color: var(--color-primary);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 400ms
+            cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 400ms ease,
+        background-color 300ms ease;
+}
+
+
+.services-cta__actions
+.btn--light:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON
+   ========================================================= */
+
+.services-cta__actions
+.btn--light-outline {
+    border: 1px solid
+        rgba(255, 255, 255, 0.35);
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: var(--color-white);
+
+    transition:
+        transform 400ms
+            cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 300ms ease,
+        border-color 300ms ease;
+}
+
+
+.services-cta__actions
+.btn--light-outline:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(255, 255, 255, 0.65);
+
+    background:
+        rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+   ========================================================= */
+
+.services-cta__actions
+.btn__arrow {
+    display: inline-flex;
+
+    margin-left: 6px;
+
+    transition:
+        transform 400ms
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.services-cta__actions
+.btn:hover
+.btn__arrow {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+.services-cta [data-reveal] {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 850ms
+            cubic-bezier(0.22, 1, 0.36, 1),
+        transform 850ms
+            cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.services-cta [data-reveal].is-revealed {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .services-cta__inner {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-10);
+    }
+
+
+    .services-cta__actions {
+        width: min(100%, 520px);
+
+        margin-left: 0;
+
+        flex-direction: row;
+    }
+
+
+    .services-cta__actions .btn {
+        flex: 1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .services-cta::before {
+        top: -160px;
+        right: -220px;
+
+        width: 420px;
+        height: 420px;
+    }
+
+
+    .services-cta::after {
+        left: -180px;
+        bottom: -180px;
+
+        width: 340px;
+        height: 340px;
+    }
+
+
+    .services-cta__inner {
+        min-height: auto;
+
+        padding-block:
+            var(--space-12);
+    }
+
+
+    .services-cta__eyebrow {
+        font-size: var(--font-size-xs);
+    }
+
+
+    .services-cta__title {
+        font-size: clamp(
+            2.35rem,
+            11vw,
+            3.5rem
+        );
+    }
+
+
+    .services-cta__text {
+        font-size: var(--font-size-sm);
+
+        line-height: 1.75;
+    }
+
+
+    .services-cta__actions {
+        width: 100%;
+
+        padding: var(--space-4);
+
+        border-radius: 22px;
+
+        flex-direction: column;
+    }
+
+
+    .services-cta__actions .btn {
+        flex: none;
+
+        min-height: 54px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .services-cta__title {
+        font-size: 2.3rem;
+    }
+
+
+    .services-cta__actions {
+        padding: var(--space-3);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .services-cta__actions .btn,
+    .services-cta__actions .btn__arrow {
+        transition: none;
+    }
+
+}

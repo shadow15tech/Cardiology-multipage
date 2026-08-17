@@ -1,0 +1,403 @@
+/* =========================================================
+   ABOUT PAGE
+   STORY / DOCTOR INTRODUCTION
+   ========================================================= */
+
+
+/* =========================================================
+   STORY SECTION
+   ========================================================= */
+
+.about-doctor {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-white);
+}
+
+
+/* =========================================================
+   STORY GRID
+   ========================================================= */
+
+.about-doctor__grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    align-items: center;
+
+    gap: clamp(
+        var(--space-10),
+        7vw,
+        var(--space-20)
+    );
+}
+
+
+/* =========================================================
+   DOCTOR VISUAL
+   ========================================================= */
+
+.about-doctor__visual {
+    position: relative;
+
+    min-width: 0;
+
+    padding: var(--space-5);
+}
+
+
+.about-doctor__image-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin-inline: auto;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-2xl)
+        var(--radius-2xl)
+        30%
+        var(--radius-2xl);
+
+    background: var(--color-background-soft);
+
+    box-shadow: var(--shadow-xl);
+
+    isolation: isolate;
+}
+
+
+.about-doctor__image-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(8, 45, 68, 0.18) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+.about-doctor__image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 0.82;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 900ms
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.about-doctor__visual:hover
+.about-doctor__image {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   VISUAL DECORATION
+   ========================================================= */
+
+.about-doctor__visual::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 110px;
+    height: 110px;
+
+    border-left: 2px solid
+        var(--color-accent);
+
+    border-bottom: 2px solid
+        var(--color-accent);
+
+    border-radius:
+        0 0 0 var(--radius-lg);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+.about-doctor__visual::after {
+    content: "";
+
+    position: absolute;
+
+    top: 5%;
+    right: 0;
+
+    width: 70px;
+    height: 70px;
+
+    border: 1px solid
+        rgba(47, 143, 157, 0.25);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   DOCTOR CONTENT
+   ========================================================= */
+
+.about-doctor__content {
+    max-width: 650px;
+}
+
+
+.about-doctor__eyebrow {
+    display: inline-block;
+
+    margin-bottom: var(--space-4);
+
+    color: var(--color-accent);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: 0.07em;
+
+    line-height: var(--line-height-normal);
+
+    text-transform: uppercase;
+}
+
+
+.about-doctor__title {
+    margin: 0 0 var(--space-2);
+
+    color: var(--color-heading);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.4rem,
+        4vw,
+        4rem
+    );
+
+    font-weight: var(--font-weight-extrabold);
+
+    line-height: var(--line-height-tight);
+
+    letter-spacing: -0.04em;
+}
+
+
+.about-doctor__designation {
+    margin: 0 0 var(--space-6);
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-base);
+
+    font-weight: var(--font-weight-semibold);
+}
+
+
+.about-doctor__text {
+    max-width: 620px;
+
+    margin: 0 0 var(--space-4);
+
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-base);
+
+    line-height: var(--line-height-relaxed);
+}
+
+
+/* =========================================================
+   DOCTOR CTA
+   ========================================================= */
+
+.about-doctor__content .btn {
+    margin-top: var(--space-4);
+}
+
+
+/* =========================================================
+   STORY HIGHLIGHT
+   ========================================================= */
+
+.about-doctor__content::after {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 620px;
+
+    height: 1px;
+
+    margin-top: var(--space-8);
+
+    background: var(--color-border);
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+.about-doctor [data-reveal] {
+    opacity: 0;
+
+    transform: translateY(28px);
+
+    transition:
+        opacity 800ms
+        cubic-bezier(0.22, 1, 0.36, 1),
+
+        transform 800ms
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.about-doctor [data-reveal].is-revealed {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-doctor__grid {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-12);
+    }
+
+
+    .about-doctor__visual {
+        width: min(100%, 560px);
+
+        margin-inline: auto;
+    }
+
+
+    .about-doctor__content {
+        max-width: 720px;
+
+        margin-inline: auto;
+
+        text-align: center;
+    }
+
+
+    .about-doctor__eyebrow {
+        display: block;
+    }
+
+
+    .about-doctor__text {
+        margin-inline: auto;
+    }
+
+
+    .about-doctor__content::after {
+        margin-inline: auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-doctor__visual {
+        padding: var(--space-3);
+    }
+
+
+    .about-doctor__image-wrapper {
+        border-radius:
+            var(--radius-xl)
+            var(--radius-xl)
+            25%
+            var(--radius-xl);
+    }
+
+
+    .about-doctor__visual::before {
+        width: 75px;
+        height: 75px;
+    }
+
+
+    .about-doctor__visual::after {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .about-doctor__title {
+        font-size: clamp(
+            2.2rem,
+            10vw,
+            3.2rem
+        );
+    }
+
+
+    .about-doctor__text {
+        font-size: var(--font-size-sm);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .about-doctor__title {
+        font-size: 2.15rem;
+    }
+
+}

@@ -1,0 +1,40 @@
+@import url("./base/reset.css");
+@import url("./base/variables.css");
+@import url("./base/typography.css");
+@import url("./base/global.css");
+
+@import url("./components/navbar.css");
+@import url("./components/footer.css");
+@import url("./components/buttons.css");
+@import url("./components/cards.css");
+@import url("./components/forms.css");
+
+
+@import url("./pages/home/hero.css");
+@import url("./pages/home/about-preview.css");
+@import url("./pages/home/services-preview.css");
+@import url("./pages/home/testimonials.css");
+@import url("./pages/home/home-cta.css");
+
+
+
+@import url("./pages/about/about-hero.css");
+@import url("./pages/about/story.css");
+@import url("./pages/about/team.css");
+@import url("./pages/about/about-cta.css");
+
+
+@import url("./pages/services/services-hero.css");
+@import url("./pages/services/service-list.css");
+@import url("./pages/services/service-details.css");
+@import url("./pages/services/services-cta.css");
+
+
+@import url("./pages/contact/contact-hero.css");
+@import url("./pages/contact/contact-info.css");
+@import url("./pages/contact/contact-form.css");
+@import url("./pages/contact/contact-cta.css");
+
+@import url("./pages/portfolio/portfolio-filter.css");
+@import url("./pages/portfolio/portfolio-hero.css");
+@import url("./pages/portfolio/projects.css");

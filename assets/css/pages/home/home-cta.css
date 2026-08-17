@@ -1,0 +1,515 @@
+/* =========================================================
+   CARDIOLOGIST WEBSITE
+   HOME — CTA
+   ========================================================= */
+
+
+/* =========================================================
+   CTA BASE
+   ========================================================= */
+
+.home-cta {
+    position: relative;
+
+    min-height: 480px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--color-primary-dark),
+            var(--color-primary)
+        );
+
+    color: var(--color-white);
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.home-cta__background {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(79, 181, 190, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(255, 255, 255, 0.05),
+            transparent 28%
+        );
+}
+
+
+/* =========================================================
+   INNER
+   ========================================================= */
+
+.home-cta__inner {
+    position: relative;
+
+    z-index: var(--z-content);
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(280px, 0.85fr);
+
+    align-items: center;
+
+    gap: var(--space-12);
+
+    padding-block: var(--space-20);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.home-cta__content {
+    max-width: 720px;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.home-cta__eyebrow {
+    display: inline-block;
+
+    margin-bottom: var(--space-5);
+
+    color: var(--color-accent-light);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.home-cta__title {
+    max-width: 760px;
+
+    margin-bottom: var(--space-5);
+
+    color: var(--color-white);
+
+    font-size: clamp(
+        2.5rem,
+        4.5vw,
+        4.5rem
+    );
+
+    line-height: 1.04;
+
+    letter-spacing: -0.045em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.home-cta__description {
+    max-width: 600px;
+
+    margin-bottom: var(--space-8);
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: var(--font-size-base);
+
+    line-height: var(--line-height-relaxed);
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.home-cta__actions {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: var(--space-4);
+}
+
+
+/* =========================================================
+   VISUAL
+   ========================================================= */
+
+.home-cta__visual {
+    position: relative;
+
+    min-height: 360px;
+
+    display: grid;
+
+    place-items: center;
+}
+
+
+/* =========================================================
+   HEART CIRCLE
+   ========================================================= */
+
+.home-cta__heart-circle {
+    position: relative;
+
+    z-index: 2;
+
+    width: 180px;
+    height: 180px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 80px
+        rgba(79, 181, 190, 0.15);
+
+    animation:
+        homeCtaFloat 5s ease-in-out infinite;
+}
+
+.home-cta__heart-circle::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border: 1px dashed
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 50%;
+
+    animation:
+        homeCtaRotate 18s linear infinite;
+}
+
+
+/* =========================================================
+   HEART
+   ========================================================= */
+
+.home-cta__heart {
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--color-accent-light);
+
+    font-size: 4rem;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(79, 181, 190, 0.35)
+        );
+
+    animation:
+        homeCtaHeartbeat 1.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PULSE RINGS
+   ========================================================= */
+
+.home-cta__pulse-ring {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid
+        rgba(79, 181, 190, 0.3);
+
+    border-radius: 50%;
+
+    animation:
+        homeCtaPulse 3s ease-out infinite;
+}
+
+.home-cta__pulse-ring--two {
+    animation-delay: 1.5s;
+}
+
+
+/* =========================================================
+   ORBIT
+   ========================================================= */
+
+.home-cta__orbit {
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    transform:
+        rotate(-25deg);
+
+    animation:
+        homeCtaRotate 25s linear infinite;
+}
+
+.home-cta__orbit::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    left: 50%;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--color-accent-light);
+
+    box-shadow:
+        0 0 14px
+        rgba(79, 181, 190, 0.8);
+}
+
+
+/* =========================================================
+   KEYFRAMES
+   ========================================================= */
+
+@keyframes homeCtaFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+@keyframes homeCtaHeartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.08);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.06);
+    }
+
+    45% {
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes homeCtaPulse {
+
+    0% {
+        opacity: 0.5;
+
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform: scale(1.8);
+    }
+
+}
+
+
+@keyframes homeCtaRotate {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .home-cta__inner {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-8);
+
+        padding-block: var(--space-16);
+
+        text-align: center;
+    }
+
+    .home-cta__content {
+        max-width: 720px;
+
+        margin-inline: auto;
+    }
+
+    .home-cta__description {
+        margin-inline: auto;
+    }
+
+    .home-cta__actions {
+        justify-content: center;
+    }
+
+    .home-cta__visual {
+        min-height: 300px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .home-cta {
+        min-height: auto;
+    }
+
+    .home-cta__inner {
+        padding-block: var(--space-14);
+    }
+
+    .home-cta__title {
+        font-size: clamp(
+            2.2rem,
+            10vw,
+            3.2rem
+        );
+    }
+
+    .home-cta__description {
+        font-size: var(--font-size-sm);
+    }
+
+    .home-cta__actions {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .home-cta__actions .btn {
+        width: 100%;
+    }
+
+    .home-cta__visual {
+        min-height: 250px;
+    }
+
+    .home-cta__heart-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .home-cta__heart {
+        font-size: 3rem;
+    }
+
+    .home-cta__pulse-ring {
+        width: 140px;
+        height: 140px;
+    }
+
+    .home-cta__orbit {
+        width: 220px;
+        height: 220px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .home-cta__heart-circle,
+    .home-cta__heart,
+    .home-cta__pulse-ring,
+    .home-cta__orbit {
+        animation: none;
+    }
+
+}
